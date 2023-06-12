@@ -1,0 +1,5 @@
+<ng-container *ngFor="let item of postsArray">
+<ul>
+    <li>{{item.title}} <button type="button" (click)="deletePost(item.id)">Delete</button> <a [routerLink]="['/editPost']">EDIT</a></li>
+</ul>
+</ng-container>
