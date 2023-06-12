@@ -21,7 +21,7 @@ const routes: Route[] = [
         component: CreatePostComponent,
     },
     {
-        path: 'editPost',
+        path: 'editPost/:id',
         component: EditPostComponent,
     },
     {

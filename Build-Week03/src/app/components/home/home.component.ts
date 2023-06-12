@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from 'src/app/models/post.interface';
 import { PostServiceService } from 'src/app/service/post-service.service';
+import { Router} from '@angular/router'
 
 @Component({
     selector: 'app-home',
@@ -9,7 +10,7 @@ import { PostServiceService } from 'src/app/service/post-service.service';
 })
 export class HomeComponent implements OnInit {
     postsArray: Post[] = [];
-    constructor(private postSrv: PostServiceService) {}
+    constructor(private postSrv: PostServiceService, private router: Router) {}
 
     ngOnInit(): void {
         this.postSrv.getPosts().subscribe((data: any) => {
@@ -30,5 +31,7 @@ export class HomeComponent implements OnInit {
           );
         }
       }
-
+      selectPostById(id?: number) {
+        this.router.navigate(['/editPost', id]);
+      }
 }
