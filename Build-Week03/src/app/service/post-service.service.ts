@@ -26,4 +26,8 @@ export class PostServiceService {
         const url = `${this.apiURL}/${postId}`;
         return this.http.put<Post>(url, post);
       }
+      getPostById(postId: number) {
+        const url = `${this.apiURL}/${postId}`;
+        return this.http.get<Post>(url);
+      }
 }

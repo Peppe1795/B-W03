@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background: rgb(156, 80, 227);
+    background: linear-gradient(
+        90deg,
+        rgba(156, 80, 227, 1) 0%,
+        rgba(232, 87, 87, 1) 50%,
+        rgba(252, 176, 69, 1) 100%
+    );
+}
+
+.postbg {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(
+        circle,
+        rgba(238, 174, 202, 1) 0%,
+        rgba(148, 187, 233, 1) 100%
+    );
+}
+
+.testo {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(9, 14, 111);
+ }

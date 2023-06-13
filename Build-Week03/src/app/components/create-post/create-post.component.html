@@ -1,11 +1,12 @@
 <form (ngSubmit)="createPosts()">
-    <div>
-      <label for="title">Titolo:</label>
-      <input type="text" id="title" name="title" [(ngModel)]="newPost.body"  required>
-    </div>
-    <div>
-      <label for="body">Contenuto:</label>
-      <textarea id="body" name="body"  [(ngModel)]="newPost.title" required></textarea>
-    </div>
-    <button type="submit">CREA POST</button>
+    <div class="mb-3 text-center mt-5">
+        <label for="title" class="form-label me-2">Titolo:</label>
+        <input class="postbg" type="text" id="title" name="title" [(ngModel)]="newPost.body"  required placeholder="Inserisci il titolo">
+      </div>
+        <div class="form-floating">
+            <textarea class="form-control postbg" placeholder="Inserisci il contenuto" id="body" name="body"  [(ngModel)]="newPost.title" required></textarea>
+            <label for="body">Contenuto</label>
+          </div>
+          <div class="d-flex justify-content-center">
+    <button type="submit" class="btn btn-success mt-3">CREA POST</button></div>
   </form>
